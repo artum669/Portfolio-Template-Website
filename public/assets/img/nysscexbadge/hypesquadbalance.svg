@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-label="HypeSquad Balance">
+  <defs>
+    <linearGradient id="hs-bal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ee3c7"/>
+      <stop offset="100%" stop-color="#2bb6a3"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#hs-bal)" d="M12 1.6 22.4 12 12 22.4 1.6 12 12 1.6Z"/>
+  <path fill="#0e1322" opacity="0.85" d="M12 5.6 6.5 11l1.05 1.05L12 7.7l4.45 4.35L17.5 11 12 5.6Zm-4.45 7.4L6.5 14.05 12 19.45l5.5-5.4-1.05-1.05L12 17.35 7.55 13Z"/>
+</svg>

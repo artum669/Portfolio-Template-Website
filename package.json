@@ -12,6 +12,8 @@
     "unused": "knip --production --dependencies --files --exports --include-entry-exports && depcheck",
     "test": "pnpm lint && pnpm core:build && vite preview",
     "upload": "pnpm build && wrangler pages deploy ./dist",
+    "deploy": "pnpm build && wrangler pages deploy ./dist --project-name=portfolio",
+    "deploy:preview": "pnpm build && wrangler pages deploy ./dist --project-name=portfolio --branch=preview",
     "prerender": "tsx --tsconfig tsconfig.app.json scripts/prerender.ts",
     "compress": "tsx --tsconfig tsconfig.app.json scripts/compress.ts",
     "og-screenshots": "python scripts/generate_og_screenshots.py --port 5173 --seo src/seo.json --cleanup",

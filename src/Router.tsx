@@ -1,11 +1,7 @@
-import { lazy } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router'
-import ErrorBoundary from './components/ErrorBoundary'
-import Layout from './Layout'
-import Home from './pages/home'
-
-const About = lazy(() => import('./pages/about'))
-const SuspenseExample = lazy(() => import('./pages/SuspenseExample'))
+import { BrowserRouter, Routes, Route, Link } from 'react-router';
+import ErrorBoundary from './components/ErrorBoundary';
+import Layout from './Layout';
+import Home from './pages/home';
 
 function Router() {
   return (
@@ -14,14 +10,14 @@ function Router() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="suspense-example" element={<SuspenseExample />} />
             <Route
-              path='*'
+              path="*"
               element={
-                <div className="flex flex-col items-center justify-center min-h-[70vh]">
-                  <h1 className="text-3xl font-bold mb-4">404</h1>
-                  <Link to="/" className="text-green-400 hover:text-green-300">Home</Link>
+                <div className="flex min-h-[70vh] flex-col items-center justify-center">
+                  <h1 className="mb-4 text-3xl font-bold text-white">404</h1>
+                  <Link to="/" className="text-violet-300 hover:text-violet-200">
+                    Back home
+                  </Link>
                 </div>
               }
             />
@@ -29,7 +25,7 @@ function Router() {
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
-  )
+  );
 }
 
-export default Router
+export default Router;
